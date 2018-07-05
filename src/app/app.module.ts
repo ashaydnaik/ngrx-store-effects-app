@@ -16,9 +16,7 @@ const environment = {
   production: false,
 };
 
-export const metaReducers: MetaReducer<any>[] = !environment.production
-  ? [storeFreeze]
-  : [];
+export const metaReducers: MetaReducer<any>[] = !environment.production ? [storeFreeze] : [];
 
 // bootstrap
 import { AppComponent } from './containers/app/app.component';
@@ -26,9 +24,7 @@ import { AppComponent } from './containers/app/app.component';
 // routes
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'products' },
-  {
-    path: 'products',
-    loadChildren: '../products/products.module#ProductsModule',
+  { path: 'products', loadChildren: '../products/products.module#ProductsModule',
   },
 ];
 

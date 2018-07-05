@@ -62,10 +62,6 @@
           "name": "pepper"
         },
         {
-          "id": 3,
-          "name": "basil"
-        },
-        {
           "id": 4,
           "name": "chili"
         },
@@ -76,6 +72,22 @@
         {
           "id": 2,
           "name": "bacon"
+        },
+        {
+          "id": 6,
+          "name": "mushroom"
+        },
+        {
+          "id": 11,
+          "name": "sweetcorn"
+        },
+        {
+          "id": 5,
+          "name": "mozzarella"
+        },
+        {
+          "id": 1,
+          "name": "anchovy"
         }
       ],
       "id": 1
@@ -126,8 +138,12 @@
       "name": "Plain Ol' Pepperoni",
       "toppings": [
         {
-          "id": 10,
-          "name": "pepperoni"
+          "id": 12,
+          "name": "tomato"
+        },
+        {
+          "id": 11,
+          "name": "sweetcorn"
         }
       ],
       "id": 3

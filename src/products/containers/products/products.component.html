@@ -3,7 +3,7 @@
     <a class="btn btn__ok" routerLink="./new">New Pizza</a>
   </div>
   <div class="products__list">
-    <div *ngIf="!((pizzas)?.length)">No pizzas, add one to get started.</div>
-    <pizza-item *ngFor="let pizza of (pizzas)" [pizza]="pizza"></pizza-item>
+    <div *ngIf="!((pizzas$ | async)?.length)">No pizzas, add one to get started.</div>
+    <pizza-item *ngFor="let pizza of (pizzas$ | async)" [pizza]="pizza"></pizza-item>
   </div>
 </div>

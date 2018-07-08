@@ -20,8 +20,8 @@ import {EffectsModule} from "@ngrx/effects";
 // routes
 export const ROUTES: Routes = [
   { path: '', component: fromContainers.ProductsComponent, },
-  { path: ':id', component: fromContainers.ProductItemComponent, },
   { path: 'new', component: fromContainers.ProductItemComponent, },
+  { path: ':pizzaId', component: fromContainers.ProductItemComponent, },
 ];
 
 @NgModule({

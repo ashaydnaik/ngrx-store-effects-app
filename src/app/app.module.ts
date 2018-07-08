@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { StoreModule, MetaReducer } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { reducers, CustomSerializer } from './store';
 
 // not used in production
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -20,6 +21,7 @@ export const metaReducers: MetaReducer<any>[] = !environment.production ? [store
 
 // bootstrap
 import { AppComponent } from './containers/app/app.component';
+import {RouterStateSerializer, StoreRouterConnectingModule} from '@ngrx/router-store';
 
 // routes
 export const ROUTES: Routes = [
@@ -33,10 +35,12 @@ export const ROUTES: Routes = [
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(ROUTES),
-    StoreModule.forRoot({}, { metaReducers }),
+    StoreModule.forRoot(reducers, { metaReducers }),
     EffectsModule.forRoot([]),
+    StoreRouterConnectingModule,
     environment.development ? StoreDevtoolsModule.instrument() : [],
   ],
+  providers: [{provide: RouterStateSerializer, useClass: CustomSerializer}],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })

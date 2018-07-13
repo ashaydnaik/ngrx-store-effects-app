@@ -70,10 +70,6 @@
           "name": "olive"
         },
         {
-          "id": 2,
-          "name": "bacon"
-        },
-        {
           "id": 6,
           "name": "mushroom"
         },
@@ -84,10 +80,6 @@
         {
           "id": 5,
           "name": "mozzarella"
-        },
-        {
-          "id": 1,
-          "name": "anchovy"
         }
       ],
       "id": 1

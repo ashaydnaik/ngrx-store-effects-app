@@ -6,6 +6,7 @@ import {Store} from "@ngrx/store";
 import {Observable} from "rxjs/Observable";
 @Component({
   selector: 'products',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['products.component.scss'],
   templateUrl: 'products.component.html'
 })
